@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="BBS Server Backups is a personal, self-hosted tool for encrypted backups to Google Drive.">
+  <title>BBS Server Backups</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html">BBS Server Backups</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </header>
+  <main id="main">
+    <p class="eyebrow">Personal · Self-hosted · Encrypted</p>
+    <h1>Private backups,<br>stored in your Drive.</h1>
+    <p class="lead">BBS Server Backups helps its owner keep encrypted copies of data from a privately operated server in the owner's Google Drive account.</p>
+
+    <section aria-labelledby="how-heading">
+      <h2 id="how-heading">How it works</h2>
+      <ol>
+        <li>The owner authorizes the backup application to use Google Drive.</li>
+        <li>Restic encrypts backup contents and file names before upload. Rclone transfers the encrypted repository to Drive.</li>
+        <li>The owner configures daily scheduled backups, retention, and recovery checks on the private server.</li>
+      </ol>
+      <p>This is a personal backup utility, not a public file-sharing or cloud storage service. These pages provide application and privacy information; backups and Google authorization do not run on this website.</p>
+    </section>
+
+    <section aria-labelledby="access-heading">
+      <h2 id="access-heading">Limited Google Drive access</h2>
+      <p>The application requests the <code>drive.file</code> permission to create and manage backup files created by the application. It does not request broad access to every file in the owner's Drive.</p>
+      <p>OAuth credentials are stored privately on the owner's server. They are not embedded in this website or its public source files.</p>
+    </section>
+
+    <section class="notice" aria-labelledby="control-heading">
+      <h2 id="control-heading">The owner stays in control</h2>
+      <p>The owner controls the backup schedule, encryption credentials, and retention policy, and can revoke Google access at any time. Revoking access stops future authorized access; it does not delete existing backups.</p>
+      <p><a href="privacy.html">Read the privacy policy</a> for details about data use, retention, and deletion.</p>
+    </section>
+
+    <section aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <p>For application or privacy questions, use the <a href="https://github.com/GodlyVert/bbs-server-backups/issues">project's GitHub issue tracker</a>. Issues are public. Do not include backup contents, tokens, encryption keys, or other confidential information.</p>
+    </section>
+  </main>
+  <footer>
+    <p>BBS Server Backups · Updated <time datetime="2026-10-20">20 October 2026</time> (UTC)</p>
+    <a href="privacy.html">Privacy policy</a>
+  </footer>
+</body>
+</html>

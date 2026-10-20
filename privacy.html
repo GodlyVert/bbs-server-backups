@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy policy for BBS Server Backups, a personal encrypted backup application using Google Drive.">
+  <title>Privacy policy · BBS Server Backups</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html">BBS Server Backups</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="privacy.html" aria-current="page">Privacy</a>
+    </nav>
+  </header>
+  <main id="main">
+    <p class="eyebrow">Privacy policy</p>
+    <h1>Your data is used<br>for your backups.</h1>
+    <p class="lead">This policy describes how BBS Server Backups handles data when its owner connects a Google Drive account for personal, self-hosted backups.</p>
+    <p class="effective-date">Effective date: <time datetime="2026-10-20">20 October 2026</time> (UTC)</p>
+
+    <section aria-labelledby="purpose-heading">
+      <h2 id="purpose-heading">1. Purpose and operation</h2>
+      <p>BBS Server Backups runs on a server controlled by its owner. It uses restic to encrypt backup data and rclone to transfer the encrypted repository to Google Drive. The owner configures daily scheduling, retention, and restore checks. This website is an informational site, not the backup service.</p>
+    </section>
+
+    <section aria-labelledby="data-heading">
+      <h2 id="data-heading">2. Data accessed and stored</h2>
+      <ul>
+        <li><strong>Selected source data:</strong> files and application data the owner chooses to back up are processed on the private server. Backup contents and original file names are encrypted by restic before upload.</li>
+        <li><strong>Google authorization:</strong> OAuth tokens and configuration needed to connect to Drive are stored privately on the server, not in this website or its public repository.</li>
+        <li><strong>Drive backup files:</strong> the application uses the <code>drive.file</code> permission to create, read, update, and delete backup files created by the application. Drive file identifiers and transfer metadata are used to maintain that repository.</li>
+        <li><strong>Operational information:</strong> the private server may keep backup timestamps, transfer results, errors, and diagnostic logs needed to operate and troubleshoot backups.</li>
+      </ul>
+      <p>The application does not request broad access to unrelated Drive files. Google receives encrypted backup files and the metadata required to store and transfer them, such as repository object names, sizes, and timestamps. Encryption does not hide all transfer metadata.</p>
+    </section>
+
+    <section aria-labelledby="use-heading">
+      <h2 id="use-heading">3. How data is used</h2>
+      <p>Data obtained through Google APIs is used only to provide and maintain the owner-authorized backup and restore functions. It is not sold, used for advertising or profiling, or used to train artificial intelligence or machine learning models.</p>
+      <p>BBS Server Backups' use and transfer of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements.</p>
+    </section>
+
+    <section aria-labelledby="sharing-heading">
+      <h2 id="sharing-heading">4. Sharing and service providers</h2>
+      <p>Encrypted backup files are sent to the Google Drive account authorized by the owner. The application does not publish backups or intentionally share Google user data with advertisers, data brokers, or other users. Restic and rclone operate as software on the private server; they are not separate destinations for the backup data.</p>
+      <p>Any access or disclosure required by law remains subject to applicable law and Google's Limited Use requirements.</p>
+    </section>
+
+    <section aria-labelledby="retention-heading">
+      <h2 id="retention-heading">5. Retention and deletion</h2>
+      <p>Backups remain in the owner's Drive until the owner deletes them or a configured retention policy removes them. No fixed automatic deletion period is promised. The owner controls retention settings and must configure and verify them.</p>
+      <p>The owner can request deletion of application-managed backups through the contact channel below, or delete the repository directly in their Drive account. Deletion must be carried out or verified by the owner or an authorized operator. Deleting source files or disconnecting Google access does not by itself delete older backups.</p>
+      <p>OAuth credentials and private operational logs remain on the server until the owner or authorized operator removes them or applies the server's retention policy. Google may retain service records under its own policies.</p>
+    </section>
+
+    <section aria-labelledby="revoke-heading">
+      <h2 id="revoke-heading">6. Revoke access</h2>
+      <p>The owner can remove the application's Google access through <a href="https://myaccount.google.com/connections">Google Account connections</a>. After revocation takes effect, the application cannot continue authorized Drive operations without renewed permission. Existing backups remain until separately deleted. The owner should also stop the backup schedule and remove the local OAuth configuration if the integration is no longer needed.</p>
+    </section>
+
+    <section aria-labelledby="security-heading">
+      <h2 id="security-heading">7. Security and owner responsibilities</h2>
+      <p>Restic encrypts backup contents before transfer, and transfers to Google use HTTPS. OAuth tokens and backup encryption credentials are kept private on the server. The owner is responsible for server access controls, updates, credential recovery, and restore testing. Encryption cannot guarantee protection if the server or its credentials are compromised.</p>
+    </section>
+
+    <section aria-labelledby="website-heading">
+      <h2 id="website-heading">8. This website</h2>
+      <p>These static pages contain no analytics scripts, advertising, sign-in forms, or application cookies. They do not collect backup contents or Google OAuth tokens. GitHub Pages, the hosting provider, may process routine connection information under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>. Following external links is subject to those services' policies.</p>
+    </section>
+
+    <section class="notice" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">9. Contact and policy changes</h2>
+      <p>For privacy questions or deletion requests, open an issue in the <a href="https://github.com/GodlyVert/bbs-server-backups/issues">BBS Server Backups GitHub issue tracker</a>. This is a public contact channel: do not attach personal data, backup contents, tokens, or encryption keys. Request a private follow-up if sensitive information is necessary.</p>
+      <p>Material changes to this policy will be reflected on this page with an updated effective date. A policy update does not itself grant additional access to Google data.</p>
+    </section>
+  </main>
+  <footer>
+    <p>BBS Server Backups · Effective <time datetime="2026-10-20">20 October 2026</time> (UTC)</p>
+    <a href="index.html">Application home</a>
+  </footer>
+</body>
+</html>
